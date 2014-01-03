@@ -1,0 +1,6 @@
+<form action="/blog/createcomment/{{post.id}}/" name="comment" method="POST">
+{%csrf_token%}
+<h3>{{post.title}}</h3>
+{{form.as_p}}
+<input type="submit" value="submit">
+</form>

@@ -1,0 +1,11 @@
+
+{%for post in post%}
+<h3>{{post.title}}</h3><br>
+{{post.created}}<br>
+ <a href="/blog/createcomment/{{post.id}}/">comment</a> &nbsp;  &nbsp;  &nbsp; <a href="/blog/detail/{{post.id}}/">seemore</a><br><br>              
+{%for comment in post.comments%}
+   {{loop.counter}}<br>
+	{{comment|truncatewords:8}}<br>
+{%endfor%}
+<hr>
+{%endfor%}
